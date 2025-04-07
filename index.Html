@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+    .zone1 {
+      text-align: center;
+    }
+    .google-logo {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 300px;
+      border-radius: 10px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="zone1">
+    <div class="google-logo">Google</div>
+    <div class="search-box">
+      <input type="text" placeholder="Search Google..." onkeydown="if(event.key==='Enter'){searchGoogle(this.value)}" />
+    </div>
+  </div>
+
+  <script>
+    function searchGoogle(query) {
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+    }
+  </script>
+</body>
+</html>
