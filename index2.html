@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Datang Caca</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    body, html {
+      height: 100%;
+    }
+    .page {
+      background-size: cover;
+      background-position: center;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .center-box {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .hidden {
+      display: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="page1" class="page" style="background-image: url('https://source.unsplash.com/featured/?blue,flower');">
+    <div class="center-box">
+      <h1>Selamat datang CACA</h1>
+      <button onclick="goToPage2()">pencet ini wak</button>
+    </div>
+  </div>
+
+  <div id="page2" class="page hidden" style="background-image: url('https://source.unsplash.com/featured/?pink,flower');">
+    <div class="center-box">
+      <h2>apa kamu anomaly bernama khofid?</h2>
+      <button onclick="goToFinalPage(true)">iya</button>
+      <button onclick="goToPage3()">tidak</button>
+    </div>
+  </div>
+
+  <div id="page3" class="page hidden" style="background-image: url('https://source.unsplash.com/featured/?pink,flower');">
+    <div class="center-box">
+      <h2>Apa kamu setuju bahwa kamu caca sang anomaly?</h2>
+      <button onclick="goToFinalPage(true)">ya</button>
+      <button onclick="goToFinalPage(true)">ya</button>
+    </div>
+  </div>
+
+  <div id="finalPage" class="page hidden" style="background-image: url('https://source.unsplash.com/featured/?pink,flower');">
+    <div class="center-box">
+      <h2>HBD caca, makasih udah minjemin pulpen, maafin aku ya.</h2>
+      <button onclick="goToImagePage()">klik buat lihat hadiah visual~</button>
+    </div>
+  </div>
+
+  <div id="imagePage" class="page hidden" style="background-color: #f0f8ff;">
+    <div class="center-box">
+      <h2>🎁 Untuk Caca 🎁</h2>
+      <img src="https://media.discordapp.net/attachments/1246131063605170308/1359883701282148492/Tak_berjudul21_20250410203156.png?ex=67f919e3&is=67f7c863&hm=cf6d7e1f404d8483e5b7a1269c9d23686d36411ec771833e3e9163ef1763630f&=&format=webp&quality=lossless&width=854&height=854" alt="Hadiah untuk Caca">
+    </div>
+  </div>
+
+  <script>
+    function goToPage2() {
+      document.getElementById('page1').classList.add('hidden');
+      document.getElementById('page2').classList.remove('hidden');
+    }
+
+    function goToPage3() {
+      document.getElementById('page2').classList.add('hidden');
+      document.getElementById('page3').classList.remove('hidden');
+    }
+
+    function goToFinalPage() {
+      document.getElementById('page2').classList.add('hidden');
+      document.getElementById('page3').classList.add('hidden');
+      document.getElementById('finalPage').classList.remove('hidden');
+    }
+
+    function goToImagePage() {
+      document.getElementById('finalPage').classList.add('hidden');
+      document.getElementById('imagePage').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
