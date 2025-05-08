@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KIR Eskul</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', times-new-roman;
+      font-family: 'Segoe UI', Times-New-Roman;
     }
 
     body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      align-items: center;
       background: linear-gradient(to top, rgba(255,255,255,1) 50%, rgba(255,255,255,0.6) 70%, transparent 100%),
                   url('https://www.pixelstalk.net/wp-content/uploads/image10/Abstract-grey-galaxy-cosmic-dust-and-stars-desktop-HD-wallpaper.jpg');
       background-size: cover;
       background-position: center;
-    }
-
-    .container {
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
     }
 
     .logo-row {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       margin-bottom: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
     }
 
     .logo-row img {
-      width: 70px;
-      height: auto;
+      width: 60px;
+      border-radius: 12px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
-      border-radius: 12px;
     }
 
     .logo-row img:hover {
@@ -52,69 +42,130 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    .history-box {
-      background-color: rgba(255,255,255,0.9);
-      padding: 1.5rem;
+    .photo-box {
+      background: rgba(255,255,255,0.85);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .photo-box img {
+      width: 120px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .mentor-box {
+      background: rgba(255,255,255,0.9);
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .text-box {
+      background: rgba(255,255,255,0.9);
+      padding: 2rem;
       border-radius: 15px;
       max-width: 600px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    .sidebar {
-      position: fixed;
-      top: 50%;
+    .text-box.dark {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+
+    .toggle-buttons {
+      position: absolute;
+      top: -40px;
       right: 0;
-      transform: translateY(-50%);
-      background-color: rgba(255,255,255,0.8);
-      padding: 1rem;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      font-weight: bold;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .toggle-buttons button {
+      background: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 0 0 0 12px;
       cursor: pointer;
-      border-radius: 8px 0 0 8px;
-      transition: background 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      font-size: 1rem;
     }
 
-    .sidebar:hover {
-      background-color: rgba(255,255,255,1);
-    }
-
-    @media (max-width: 600px) {
-      .logo-row img {
-        width: 50px;
-      }
-
-      .history-box {
-        padding: 1rem;
-      }
+    .text-box.dark .toggle-buttons button {
+      background: #444;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <div class="sidebar" onclick="window.location.href='#about'">About Us</div>
+  <div class="logo-row">
+    <a href="https://wa.me/" target="_blank" title="WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/WhatsApp_Logo_green.svg/330px-WhatsApp_Logo_green.svg.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/kiresearch/" target="_blank" title="Instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/250px-Instagram_logo_2022.svg.png" alt="Instagram">
+    </a>
+    <a href="https://sma84jkt.sch.id" target="_blank" title="SMA 84">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgauF63N4_mwdbK9MzEqEhkzX8ljA9rVDtNKT68ytOMn9A9zq0Q2b_vrYeF38FWYmHUr_Ln-LtrTDoJUbpq-tPIngrLK13eRit0x2uWMY2bmpKV5oW0kYp31bw8vqQiEV47FNOvwaD6BT8/s320/LOGO+SMAN+84+JAKARTA.jpeg" alt="SMA 84">
+    </a>
+  </div>
 
-  <div class="container">
-    <div class="logo-row">
-      <a href="https://wa.me/" target="_blank" title="WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/WhatsApp_Logo_green.svg/330px-WhatsApp_Logo_green.svg.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.instagram.com/kiresearch/" target="_blank" title="Instagram">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/250px-Instagram_logo_2022.svg.png" alt="Instagram">
-      </a>
-      <a href="https://sma84jkt.sch.id" target="_blank" title="SMA 84">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgauF63N4_mwdbK9MzEqEhkzX8ljA9rVDtNKT68ytOMn9A9zq0Q2b_vrYeF38FWYmHUr_Ln-LtrTDoJUbpq-tPIngrLK13eRit0x2uWMY2bmpKV5oW0kYp31bw8vqQiEV47FNOvwaD6BT8/s320/LOGO+SMAN+84+JAKARTA.jpeg" alt="SMA 84">
-      </a>
+  <div class="photo-box">
+    <img src="https://media.discordapp.net/attachments/1246131063605170308/1369963642635681812/Tak_berjudul25_20250508104754_1.png?ex=681dc591&is=681c7411&hm=f128551255b4e963dfab9a998565bca329da2ed9ced92db5d31c795da3168779&=&format=webp&quality=lossless&width=534&height=534" alt="Pembina">
+    <div class="mentor-box">Kak Farhan - Pembina</div>
+  </div>
+
+  <div class="text-box" id="textBox">
+    <div class="toggle-buttons">
+      <button onclick="showText('sejarah')">☀️</button>
+      <button onclick="showText('struktur')">🌑</button>
     </div>
-
-    <div class="history-box" id="about">
+    <div id="content">
       <h2>Sejarah KIR</h2>
-      <p>
-        WELCOME!!. Ini adalah gate menuju Kelompok Ilmiah Remaja (KIR) milik SMAN 84 Jakarta. Kir sendiri adalah wadah bagi siswa yang suka berpikir kritis, kiri dan melakukan tindak aktivis. Siswa di Eskul Kir sendiri sering melakukan tindak sindiran terhadap bapak pres tingkat sekolah ber-inisial Berto.
-      </p>
+      <p>WELCOME!!. Ini adalah gate menuju Kelompok Ilmiah Remaja (KIR) milik SMAN 84 Jakarta. Kir sendiri adalah wadah bagi siswa yang suka berpikir kritis, kiri dan melakukan tindak aktivis. Siswa di Eskul Kir sendiri sering melakukan tindak sindiran terhadap bapak pres tingkat sekolah ber-inisial Berto.</p>
     </div>
   </div>
+
+  <script>
+    function showText(mode) {
+      const textBox = document.getElementById('textBox');
+      const content = document.getElementById('content');
+
+      if (mode === 'struktur') {
+        textBox.classList.add('dark');
+        content.innerHTML = `
+          <h2>Struktur KIR</h2>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <div style="text-align: center;">
+              <img src="https://media.discordapp.net/attachments/1246131063605170308/1369963642635681812/Tak_berjudul25_20250508104754_1.png?ex=681dc591&is=681c7411&hm=f128551255b4e963dfab9a998565bca329da2ed9ced92db5d31c795da3168779&=&format=webp&quality=lossless&width=534&height=534" alt="Ketua" style="width: 120px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+              <p><strong>Ketua</strong><br>Babi Ganas</p>
+            </div>
+            <div style="text-align: center;">
+              <img src="https://media.discordapp.net/attachments/1246131063605170308/1369963642635681812/Tak_berjudul25_20250508104754_1.png?ex=681dc591&is=681c7411&hm=f128551255b4e963dfab9a998565bca329da2ed9ced92db5d31c795da3168779&=&format=webp&quality=lossless&width=534&height=534" alt="Wakil Ketua" style="width: 120px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+              <p><strong>Wakil Ketua</strong><br>Deandra Eka Darmawangsa</p>
+            </div>
+          </div>
+        `;
+      } else {
+        textBox.classList.remove('dark');
+        content.innerHTML = `
+          <h2>Sejarah KIR</h2>
+          <p>WELCOME!!. Ini adalah gate menuju Kelompok Ilmiah Remaja (KIR) milik SMAN 84 Jakarta. Kir sendiri adalah wadah bagi siswa yang suka berpikir kritis, kiri dan melakukan tindak aktivis. Siswa di Eskul Kir sendiri sering melakukan tindak sindiran terhadap bapak pres tingkat sekolah ber-inisial Berto.</p>
+        `;
+      }
+    }
+  </script>
 
 </body>
 </html>
